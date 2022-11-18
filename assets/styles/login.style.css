@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-login{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 650px;
+    /* border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50px; */
+    /* From https://css.glass */
+    background: rgba(243, 239, 239, 0.19);
+    border-radius: 50px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.2px);
+    -webkit-backdrop-filter: blur(6.2px);
+}
+
+.form-label{
+    font-size: 1.2rem;
+    width: 400px;
+    background: rgba(243, 239, 239, 0.19);
+    border-radius: 50px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.2px);
+    -webkit-backdrop-filter: blur(6.2px);
+}
+
+.form-control{
+    border-radius: 250px;
+}
+
+.img-login{
+    width: 750px;
+    object-fit: cover;
+}

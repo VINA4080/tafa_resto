@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+<!-- fontawesome cdn -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{{ encore_entry_link_tags('app') }}
+{% endblock %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<section>
+    <div class="container-fluid index d-flex justify-content-center align-items-center" style="height: 80vh;">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6); margin-top: 67px; height: 80vh;">
+            <div class="d-flex justify-content-center align-items-center flex-column" style="height: 100vh;">
+                <h1 class="text-white">YOUR DREAM FOOD</h1>
+                <p class="w-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sunt, inventore quod ex
+                    dolore alias recusandae rem accusamus! Impedit voluptate velit culpa error animi. Id tenetur quidem
+                    neque est nostrum.</p>
+                <button class="btn-header ">VIEW MENU</button>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+</section>
+{% endblock %}

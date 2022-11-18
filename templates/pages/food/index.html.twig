@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+<!-- fontawesome cdn -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{{ encore_entry_link_tags('app') }}
+{% endblock %}
+
+{% block title %}Tafa-Resto | Nos menus{% endblock %}
+
+{% block body %}
+<div class="container-fluid food-container d-flex justify-content-center flex-column">
+    <h1 class="text-center mt-4">Tous nos menus</h1>
+    <div class="row mt-4">
+        <div class="d-flex justify-content-around flex-row flex-wrap">
+            {% for food in food %}
+
+            {% if food.quantity > 0 %}
+                
+            
+            <div class="mb-5" style="margin-top: 20px;">
+                <div class="card" style="width: 25rem;">
+                    <div class="hover-shadow">
+                        <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
+                            
+                            <img style="object-fit: cover;" src="{{ asset(food.image) }}" class="card-img-top" alt="..."
+                                width="450" height="450">
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-end h-100 px-3 mt-3">
+                            <h5><span class="badge bg-danger ms-2">{{ food.price }} Ar</span></h5>
+                        </div>
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">{{ food.name }} <span class="badge bg-warning ms-2 pl-4">{{ food.quantity }}</span></h5>
+                            <p class="card-text">{{ food.description }}</p>
+                            {# <p class="card-text">{{ food.price }}$</p> #}
+                            <a href="{{ path('app_command_show', {'id': food.id}) }}" class="btn text-white font-weight-bolder" style="background-color: rgb(15, 15, 15)">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {# <div class="card mx-3">
+                <div class="bg-image hover-overlay hover-zoom hover-shadow hover-zoom ripple" data-mdb-ripple-color="light">
+                    <img style="object-fit: cover;" src="{{ food.image }}" class="card-img-top" alt="..."
+                                width="450" height="450">
+                    <a href="#!">
+                        <div class="mask">
+                            <div class="d-flex justify-content-start align-items-end h-100">
+                                <h5><span class="badge bg-danger ms-2">-10%</span></h5>
+                            </div>
+                        </div>
+                        <div class="hover-overlay">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <a href="" class="text-reset">
+                        <p class="mb-2">Pink snickers</p>
+                    </a>
+                    <p class="mb-0">
+                        <s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
+                    </p>
+                </div>
+            </div>
+            </li>
+            </ul>
+        </div>
+        <!-- Sidenav --> #}
+        {% endfor %}
+    </div>
+</div>
+</div>
+{% endblock %}

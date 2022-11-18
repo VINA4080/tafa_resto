@@ -1,0 +1,9 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~bootswatch/dist/zephyr/bootstrap.css";
+
+@import url(/assets/styles/style.css);
+@import url(/assets/styles/index.style.css);
+@import url(/assets/styles/header.style.css);
+@import url(/assets/styles/login.style.css);
+@import url(/assets/styles/register.style.css);
+@import "~mdb.min.css";

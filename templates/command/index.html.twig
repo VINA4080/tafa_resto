@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CommandController!{% endblock %}
+
+{% block body %}
+<div class="container">
+
+    <h1 class="text-danger">Votre commande est :</h1>
+
+    <div class="table-responsive-md">
+        <table class="table">
+            {{ form_start(form) }}
+            <thead>
+                <th scope="col"></th>
+                <th scope="col">Nom du plat</th>
+                <th scope="col">Quantité</th>
+                <th scope="col">Prix unitaire (Ariary)</th>
+                <th scope="col">Prix Total</th>
+            </thead>
+            <tbody>
+                <td>
+                    <img src="{{ asset(food.image) }}" class="w-50 h-50 img-fluid" />
+                </td>
+                <td>{{ food.name }}</td>
+                <td>
+
+                    {{ form_widget(form.quantity) }}
+
+                </td>
+                <td>{{food.price}}</td>
+                <td>
+
+                </td>
+            </tbody>
+
+            <tfoot>
+
+                <td>
+                    <button type="submit" class="btn btn-success">Valider</button>
+                </td>
+            </tfoot>
+        </table>
+        {{ form_end(form) }}
+    </div>
+</div>
+{% endblock %}

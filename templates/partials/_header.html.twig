@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-dark text-white navbar-container" style="background-color: rgb(15, 15, 15)">
+  <div class="container-fluid header-container">
+    <div class="collapse navbar-collapse d-flex align-items-center justify-content-center" id="navbarColor02">
+      <ul class="navbar-nav d-flex align-items-center justify-content-end ">
+        {# <li class="nav-item">
+          <a class="nav-link active" href="#">Home
+          </a>
+        </li> #}
+        <a class="link-logo px-5 " href="#"><img src="{{ asset('kisspng-computer-icons-restaurant.png')}}" height="50" width="50"> <span class="span-logo">Tafa Resto</span></a>
+        {# <a class="navbar-brand d-flex align-items-center justify-content-center" href="#">LOGO</a> #}
+        {# <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+          aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> #}
+        <li class="nav-item">
+          <a class="nav-link text-white font-weight-bolder text-header " href="{{ path('app_home') }}">ACCUEIL</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white font-weight-bolder text-header" href="{{ path('app_foods') }}">LES MENUS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white font-weight-bolder text-header" href="#">PROMOS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white font-weight-bolder text-header" href="#">FIDELITE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white font-weight-bolder text-header" href="#">ENGAGEMENT</a>
+        </li>
+        
+        {% if app.user %}
+          <li class="nav-item">
+            <a class="nav-link text-white font-weight-bolder text-header" href="{{ path('app_logout') }}"> <i class="fa fa-sign-out" aria-hidden="true"></i> DECONNEXION </a>
+          </li>
+          {% else %}<li class="nav-item">
+            <a class="nav-link text-white font-weight-bolder text-header" href="{{ path('app_login') }}"><i class="fa fa-user-circle" aria-hidden="true"></i> CONNEXION</a>
+          </li>
+        {% endif %}
+      </ul>
+        {# <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+            aria-expanded="false">Menu</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+        </li> #}
+      
+      {# <form class="d-flex">
+        <input class="form-control me-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form> #}
+    </div>
+  </div>
+</nav>

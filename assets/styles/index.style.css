@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.index{
+    background-image: url(/public/pexels-chan-walrus-958545.jpg);
+    background-size: cover;
+    /* background-attachment: fixed; */
+    height: 100vh;
+}
+
+p{
+    color: white;
+}
+
+.btn-header{
+    border: 2px solid #ffba00;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .2);
+    color:#ffba00;
+    transition: .5s ease;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.btn-header:hover{
+    transform: scale(1.2);
+}
+
+.span-logo{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #ffba00;
+    text-shadow:
+    0 0 5px #ffba00,
+    0 0 10px #ffba00,
+    0 0 20px #ffba00,
+    0 0 40px #ffba00,
+    0 0 80px #ffba00,
+    0 0 90px #ffba00;
+    /* 0 0 100px #ffba00,
+    0 0 150px #ffba00; */
+}
+
+.link-logo{
+    transition: 0.5s ease;
+}
+
+.text-header{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+@keyframes neon {
+    from {
+      text-shadow:
+      0 0 6px rgba(100,228,225,0.92),
+      0 0 30px rgba(100,228,225,0.34),
+      0 0 12px rgba(20,132,242,0.52),
+      0 0 21px rgba(20,132,242,0.92),
+      0 0 34px rgba(20,132,242,0.78),
+      0 0 54px rgba(20,132,242,0.92);
+    }
+    to {
+      text-shadow:
+      0 0 6px rgba(202,228,225,0.98),
+      0 0 30px rgba(202,228,225,0.42),
+      0 0 12px rgba(30,132,242,0.58),
+      0 0 22px rgba(30,132,242,0.84),
+      0 0 38px rgba(30,132,242,0.88),
+      0 0 60px rgba(30,132,242,1);
+    }
+  }
+  
+  
+  

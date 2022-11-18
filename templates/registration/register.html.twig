@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+{% block stylesheets %}
+<!-- fontawesome cdn -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+{{ encore_entry_link_tags('app') }}
+{% endblock %}
+
+{% block header %}{% endblock %}
+{% block footer %}{% endblock %}
+{% block body %}
+
+<body>
+    <main class="main-register">
+        <div class="container register py-5">
+            <h1 class="text-center mb-5">Register</h1>
+
+            {# afficher un message de confirmation #}
+            {% for message in app.flashes('success') %}
+            <div class="alert alert-success border-success border-2">
+                {{ message }}
+            </div>
+            {% endfor %}
+
+            {{ form_start(registrationForm) }}
+            <div class="form">
+
+                <label class="form-label first-form-label">{{ form_row(registrationForm.fullname) }}</label>
+
+
+
+                <label class="form-label second-form-label">{{ form_row(registrationForm.tel) }}</label>
+
+
+
+                <label class="form-label first-form-label">{{ form_row(registrationForm.adress) }}</label>
+
+
+
+                <label class="form-label first-form-label">{{ form_row(registrationForm.email) }}</label>
+
+
+
+                <label class="form-label first-form-label">{{ form_row(registrationForm.plainPassword, {label:
+                    'Password'}) }}</label>
+
+
+                {{ form_row(registrationForm.agreeTerms) }}
+
+
+                <button type="submit" class="btn btn-lg btn-dark w-100">Register</button>
+                <div class="text-center mt-3"><a href="{{ path('app_login') }}">I have an account</a></div>
+            </div>
+            {{ form_end(registrationForm) }}
+
+        </div>
+    </main>
+</body>
+{% endblock %}
